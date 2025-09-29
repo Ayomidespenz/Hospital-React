@@ -1,0 +1,134 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin and login pages
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://arcticobgyn.com/sitemap.xml
+
+# Crawl-delay: 10  # Uncomment if needed to limit crawl rate
+
+# Allow all bots to access these paths
+Allow: /$
+Allow: /services/
+Allow: /doctors/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+
+# Block specific bots (example)
+# User-agent: BadBot
+# Disallow: /
+
+# Allow Google image search to index all images
+User-agent: Googlebot-Image
+Allow: /*
+Disallow: /assets/images/private/
+
+# Allow all bots to access these file types
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Block query strings in URLs (prevents duplicate content)
+Disallow: /*?*
+# But allow specific query parameters that are needed
+Allow: /*?page=
+Allow: /*?category=
+
+# Block specific file types
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.pdf$
+
+# Block specific paths
+Disallow: /search/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /account/
+
+# Block common development and staging environments
+Disallow: /*?preview=true
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /test/
+
+# Block WordPress-specific paths (if applicable)
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-json/
+Disallow: /xmlrpc.php
+
+# Block common CMS paths
+Disallow: /cms/
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /backend/
+
+# Block common technical directories
+Disallow: /includes/
+Disallow: /templates/
+Disallow: /tmp/
+Disallow: /logs/
+
+# Block common query parameters that might cause duplicate content
+Disallow: /*?s=
+Disallow: /*&s=
+Disallow: /*?search=
+Disallow: /*?q=
+Disallow: /*?query=
+Disallow: /*?page=
+Disallow: /*?p=
+Disallow: /*?id=
+Disallow: /*?categoryid=
+Disallow: /*?action=
+Disallow: /*?print=
+Disallow: /*?lang=
+
+# Allow Google to crawl AJAX query parameters
+# Google treats URLs with these parameters as normal URLs with query parameters
+# https://developers.google.com/search/docs/advanced/robots/robots_txt#url-matching-based-on-query-parameters
+User-agent: Googlebot
+Allow: /*?*
+
+# Host directive to specify the main website URL
+# Replace with your actual domain
+Host: https://arcticobgyn.com
+
+# Crawl-delay for specific bots (if needed)
+# User-agent: Yandex
+# Crawl-delay: 10
+
+# Block specific bots from sensitive areas
+User-agent: MJ12bot
+Disallow: /api/
+Disallow: /private/
+
+# Block all AI bots from crawling
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+# Block specific paths for all bots
+Disallow: /cgi-bin/
+Disallow: /includes/
+Disallow: /templates/
+Disallow: /tmp/
+Disallow: /logs/
+
+# Allow ads.txt for all bots
+Allow: /ads.txt
+Allow: /ads.txt?*

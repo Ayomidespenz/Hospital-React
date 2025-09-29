@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap"
+import Contact from "./Contact"
 
 const HomePage = () => {
   return (
@@ -7,27 +8,21 @@ const HomePage = () => {
       <section 
         className="hero-section position-relative" 
         style={{
-          background: 'linear-gradient(45deg, #9f1f9f, #ff3399)',
+          background: `linear-gradient(rgba(159, 31, 159, 0.2), rgba(255, 51, 153, 0.3)), url(/modern-hospital-exterior.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           minHeight: '90vh',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center'
         }}
       >
-        <div 
-          className="position-absolute w-100 h-100" 
-          style={{
-            backgroundImage: `url(../assets/modern-hospital-exterior.png)`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: '0.2',
-            top: 0,
-            left: 0
-          }}
-        />
-        <Container className="position-relative" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
+        <Container className="position-relative" style={{ zIndex: 1, paddingTop: '120px', paddingBottom: '120px' }}>
           <Row className="align-items-center">
-            <Col lg={6} className="text-white text-start">
+            <Col lg={6} className="text-black text-start">
               <h1 style={{ 
-                fontSize: '3.5rem', 
+                fontSize: '3.0rem', 
                 fontWeight: 'bold',
                 marginBottom: '1.5rem',
                 lineHeight: '1.2'
@@ -36,7 +31,7 @@ const HomePage = () => {
                 for Every Stage<br />
                 Of Womanhood
               </h1>
-              <p className="lead mb-4" style={{ fontSize: '1.2rem', opacity: '0.9' }}>
+              <p className="lead mb-4" style={{ fontSize: '1.6rem', textColor: 'black',  }}>
                 Experience Exceptional Healthcare with HisCure Hospital - 
                 Your Trusted Specialist Healthcare Provider.
               </p>
@@ -268,7 +263,7 @@ const HomePage = () => {
                       <i className="fas fa-award fa-2x"></i>
                     </div>
                     <div>
-                      <h5 className="mb-1">25+ Years</h5>
+                      <h5 className="mb-1">15+ Years</h5>
                       <p className="text-muted mb-0">of Excellence</p>
                     </div>
                   </div>
@@ -278,10 +273,10 @@ const HomePage = () => {
                     <div className="text-hospital-primary me-3">
                       <i className="fas fa-users fa-2x"></i>
                     </div>
-                    <div>
+                    {/* <div>
                       <h5 className="mb-1">500+ Doctors</h5>
                       <p className="text-muted mb-0">Expert Medical Team</p>
-                    </div>
+                    </div> */}
                   </div>
                 </Col>
               </Row>
@@ -292,7 +287,7 @@ const HomePage = () => {
             <Col lg={6}>
               <div className="text-center">
                 <img
-                  src="../assets/modern-hospital-exterior.png"
+                  src="/modern-hospital-exterior.png"
                   alt="HisCure Hospital Building"
                   className="img-fluid rounded shadow"
                 />
@@ -303,180 +298,9 @@ const HomePage = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section-padding bg-hospital-primary text-white">
-        <Container>
-          <Row className="text-center mb-5">
-            <Col>
-              <h2 className="display-5 fw-bold mb-3">Contact Us</h2>
-              <p className="lead">Get in touch with us for appointments, inquiries, or emergency services</p>
-            </Col>
-          </Row>
-          <Row className="g-4">
-            <Col md={4} className="text-center">
-              <div className="mb-3">
-                <i className="fas fa-phone fa-3x mb-3"></i>
-                <h5>Emergency Hotline</h5>
-                <p className="mb-0">
-                  <strong>(555) 911-HELP</strong>
-                  <br />
-                  24/7 Emergency Services
-                </p>
-              </div>
-            </Col>
-            <Col md={4} className="text-center">
-              <div className="mb-3">
-                <i className="fas fa-calendar-alt fa-3x mb-3"></i>
-                <h5>Appointments</h5>
-                <p className="mb-0">
-                  <strong>(555) 123-CARE</strong>
-                  <br />
-                  Mon-Fri: 8AM-6PM
-                  <br />
-                  Sat: 9AM-2PM
-                </p>
-              </div>
-            </Col>
-            <Col md={4} className="text-center">
-              <div className="mb-3">
-                <i className="fas fa-map-marker-alt fa-3x mb-3"></i>
-                <h5>Location</h5>
-                <p className="mb-0">
-                  123 Healthcare Drive
-                  <br />
-                  Medical City, MC 12345
-                  <br />
-                  <a href="#" className="text-white">
-                    Get Directions
-                  </a>
-                </p>
-              </div>
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col className="text-center">
-              <Button variant="light" size="lg" href="/patient/register">
-                Schedule an Appointment
-              </Button>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-dark text-white py-5">
-        <Container>
-          <Row>
-            <Col md={4}>
-              <h5 className="mb-3">
-                <i className="fas fa-hospital-alt me-2"></i>
-                HisCure Hospital
-              </h5>
-              <p className="text-muted">
-                Providing exceptional healthcare services with compassion, innovation, and excellence since 1998.
-              </p>
-            </Col>
-            <Col md={2}>
-              <h6 className="mb-3">Quick Links</h6>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="#services" className="text-muted text-decoration-none">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="#departments" className="text-muted text-decoration-none">
-                    Departments
-                  </a>
-                </li>
-                <li>
-                  <a href="#about" className="text-muted text-decoration-none">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text-muted text-decoration-none">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </Col>
-            <Col md={2}>
-              <h6 className="mb-3">Patient Portal</h6>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="/patient/login" className="text-muted text-decoration-none">
-                    Login
-                  </a>
-                </li>
-                <li>
-                  <a href="/patient/register" className="text-muted text-decoration-none">
-                    Register
-                  </a>
-                </li>
-                <li>
-                  <a href="/patient/appointments" className="text-muted text-decoration-none">
-                    Appointments
-                  </a>
-                </li>
-                <li>
-                  <a href="/patient/records" className="text-muted text-decoration-none">
-                    Medical Records
-                  </a>
-                </li>
-              </ul>
-            </Col>
-            <Col md={2}>
-              <h6 className="mb-3">For Staff</h6>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="/staff/login" className="text-muted text-decoration-none">
-                    Staff Login
-                  </a>
-                </li>
-                <li>
-                  <a href="/staff-portal" className="text-muted text-decoration-none">
-                    Staff Portal
-                  </a>
-                </li>
-              </ul>
-            </Col>
-            <Col md={2}>
-              <h6 className="mb-3">Follow Us</h6>
-              <div className="d-flex gap-2">
-                <a href="#" className="text-muted">
-                  <i className="fab fa-facebook fa-lg"></i>
-                </a>
-                <a href="#" className="text-muted">
-                  <i className="fab fa-twitter fa-lg"></i>
-                </a>
-                <a href="#" className="text-muted">
-                  <i className="fab fa-linkedin fa-lg"></i>
-                </a>
-                <a href="#" className="text-muted">
-                  <i className="fab fa-instagram fa-lg"></i>
-                </a>
-              </div>
-            </Col>
-          </Row>
-          <hr className="my-4" />
-          <Row>
-            <Col className="text-center">
-              <p className="text-muted mb-0">
-                &copy; 2025 HisCure Hospital. All rights reserved. |
-                <a href="#" className="text-muted text-decoration-none">
-                  {" "}
-                  Privacy Policy
-                </a>{" "}
-                |
-                <a href="#" className="text-muted text-decoration-none">
-                  {" "}
-                  Terms of Service
-                </a>
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+      <div style={{ background: 'linear-gradient(45deg, #9f1f9f, #ff3399)' }}>
+        <Contact />
+      </div>
     </div>
   )
 }

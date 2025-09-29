@@ -10,6 +10,7 @@ import AppointmentBooking from "./components/pages/AppointmentBooking"
 import MedicalRecords from "./components/pages/MedicalRecords"
 import BillingHistory from "./components/pages/BillingHistory"
 import PatientProfile from "./components/pages/PatientProfile"
+import Footer from "./components/pages/Footer"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/patient/profile" element={<PatientProfile />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   )

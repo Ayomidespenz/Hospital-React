@@ -1,0 +1,74 @@
+{
+  "short_name": "Arctic Gynae",
+  "name": "Arctic Gynae Centre",
+  "description": "Expert women's healthcare with compassion and excellence",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./?source=pwa",
+  "display": "standalone",
+  "theme_color": "#0d6efd",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "short_name": "Book",
+      "description": "Book a new appointment",
+      "url": "/book-appointment?source=pwa_homescreen",
+      "icons": [{ "src": "/icons/calendar-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "View our healthcare services",
+      "url": "/services?source=pwa_homescreen"
+    }
+  ],
+  "categories": ["health", "medical", "healthcare", "womens health"], 
+  "screenshots": [
+    {
+      "src": "/screenshots/homepage.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homepage"
+    },
+    {
+      "src": "/screenshots/services.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Our Services"
+    }
+  ],
+  "iarc_rating": "https://www.example.org/foo/bar",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.example.app1",
+      "id": "com.example.app1"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://itunes.apple.com/app/example-app1/id123456789"
+    }
+  ]
+}
