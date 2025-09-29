@@ -42,8 +42,8 @@ const Navigation = () => {
               <NavDropdown.Item as="a" href="#neurology" style={gradientText}>Neurology</NavDropdown.Item>
               <NavDropdown.Item as="a" href="#radiology" style={gradientText}>Radiology</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#about" style={gradientText}>About</Nav.Link>
-            <Nav.Link href="#contact" style={gradientText}>Contact</Nav.Link>
+            <Nav.Link as={Link} to="/about" style={gradientText}>About</Nav.Link>
+            <Nav.Link as={Link} to="/contact" style={gradientText}>Contact</Nav.Link>
           </Nav>
 
           <Nav>

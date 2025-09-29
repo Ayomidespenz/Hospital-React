@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaBaby, FaHeartbeat, FaProcedures, FaStethoscope, FaSyringe } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 const Services = () => {
   const services = [
@@ -172,55 +173,58 @@ const Services = () => {
           {services.map((service, index) => (
             <Col md={6} lg={4} key={service.id} className="fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="card h-100 border-0 shadow-sm hover-scale transition-all">
-                <div className="card-body p-4 text-center">
-                  <div className="icon-box bg-primary-soft rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style={{width: '80px', height: '80px'}}>
-                    {service.icon}
-                  </div>
-                  <h4 className="h5 mb-3" style={{
-                    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    color: 'transparent'
-                  }}>{service.title}</h4>
-                  <p className="mb-4" style={{
-                    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    color: 'transparent'
-                  }}>{service.description}</p>
-                  <div className="mt-auto">
-                    <ul className="list-unstyled text-start">
-                      {service.features.map((feature, i) => (
-                        <li key={i} className="mb-2" style={{
-                          background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent',
-                          backgroundClip: 'text',
-                          color: 'transparent'
-                        }}>
-                          <i className="fas fa-check-circle me-2" style={{ color: '#0dcaf0' }}></i>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link 
-                      to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} 
-                      className="p-0 mt-3 text-decoration-none"
+                <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="text-decoration-none">
+                  <div className="card-body p-4 text-center">
+                    <div className="icon-box bg-primary-soft rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style={{width: '80px', height: '80px'}}>
+                      {service.icon}
+                    </div>
+                    <h4 className="h5 mb-3" style={{
+                      background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      color: 'transparent'
+                    }}>{service.title}</h4>
+                    <p className="mb-4" style={{
+                      background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      color: 'transparent'
+                    }}>{service.description}</p>
+                    <div className="mt-auto">
+                      <ul className="list-unstyled text-start">
+                        {service.features.map((feature, i) => (
+                          <li key={i} className="mb-2" style={{
+                            background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text',
+                            opacity: 0.9
+                          }}>
+                            <i className="fas fa-check-circle text-success me-2"></i>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <Button 
+                      variant="outline-primary" 
+                      className="mt-3"
                       style={{
-                        background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                        borderColor: '#5d6f8a',
+                        background: 'transparent',
+                        backgroundImage: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
-                        color: 'transparent',
-                        display: 'inline-block'
+                        color: 'transparent'
                       }}
                     >
-                      Learn More <i className="fas fa-arrow-right ms-1"></i>
-                    </Link>
+                      Learn More <i className="fas fa-arrow-right ms-2"></i>
+                    </Button>
                   </div>
-                </div>
+                </Link>
               </div>
             </Col>
           ))}

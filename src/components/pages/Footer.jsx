@@ -15,12 +15,12 @@ const Footer = () => {
   ];
 
   const services = [
-    { name: "Obstetrics", path: "/services/obstetrics" },
-    { name: "Gynecology", path: "/services/gynecology" },
-    { name: "Family Planning", path: "/services/family-planning" },
-    { name: "Fertility", path: "/services/fertility" },
-    { name: "Ultrasound", path: "/services/ultrasound" },
-    { name: "Prenatal Care", path: "/services/prenatal-care" },
+    { name: "Gynecological Care", path: "/services/gynecological-care" },
+    { name: "Prenatal & Postnatal Care", path: "/services/prenatal-postnatal-care" },
+    { name: "Fertility Services", path: "/services/fertility-services" },
+    { name: "Minimally Invasive Surgery", path: "/services/minimally-invasive-surgery" },
+    { name: "Well Woman Exams", path: "/services/well-woman-exams" },
+    { name: "Contraception & Family Planning", path: "/services/contraception-family-planning" },
   ];
 
   const contactInfo = [
