@@ -1,14 +1,15 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap"
 import Contact from "./Contact"
+import Services from "./Services"
 
 const HomePage = () => {
   return (
-    <div style={{ marginTop: "76px" }}>
+    <div >
       {/* Hero Section */}
       <section 
         className="hero-section position-relative" 
         style={{
-          background: `linear-gradient(rgba(159, 31, 159, 0.2), rgba(255, 51, 153, 0.3)), url(/modern-hospital-exterior.png)`,
+          backgroundImage:'url(/modern-hospital-exterior.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '90vh',
@@ -41,8 +42,8 @@ const HomePage = () => {
                   size="lg" 
                   href="/patient/register"
                   style={{
-                    padding: '0.8rem 2rem',
-                    fontWeight: '500',
+                    padding: '0.6rem 1.5rem',
+                    fontWeight: '400',
                     borderRadius: '50px'
                   }}
                 >
@@ -51,10 +52,10 @@ const HomePage = () => {
                 <Button 
                   variant="outline-light" 
                   size="lg" 
-                  href="#services"
+                  href="/services"
                   style={{
-                    padding: '0.8rem 2rem',
-                    fontWeight: '500',
+                    padding: '0.6rem 1.5rem',
+                    fontWeight: '400',
                     borderRadius: '50px'
                   }}
                 >
@@ -70,173 +71,93 @@ const HomePage = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="section-padding">
-        <Container>
-          <Row className="text-center mb-5">
-            <Col>
-              <h2 className="display-5 fw-bold text-hospital-primary mb-3">Our Medical Services</h2>
-              <p className="lead text-muted">Comprehensive healthcare services delivered by our expert medical team</p>
-            </Col>
-          </Row>
-          <Row className="g-4">
-            <Col md={6} lg={3}>
-              <Card className="h-100 text-center border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="text-hospital-primary mb-3">
-                    <i className="fas fa-ambulance fa-3x"></i>
-                  </div>
-                  <Card.Title className="h5">Emergency Care</Card.Title>
-                  <Card.Text className="text-muted">
-                    24/7 emergency medical services with rapid response and advanced life support.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={3}>
-              <Card className="h-100 text-center border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="text-hospital-primary mb-3">
-                    <i className="fas fa-user-md fa-3x"></i>
-                  </div>
-                  <Card.Title className="h5">Surgery</Card.Title>
-                  <Card.Text className="text-muted">
-                    Advanced surgical procedures with minimally invasive techniques and expert surgeons.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={3}>
-              <Card className="h-100 text-center border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="text-hospital-primary mb-3">
-                    <i className="fas fa-heartbeat fa-3x"></i>
-                  </div>
-                  <Card.Title className="h5">Cardiology</Card.Title>
-                  <Card.Text className="text-muted">
-                    Comprehensive heart care including diagnostics, treatment, and cardiac rehabilitation.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={3}>
-              <Card className="h-100 text-center border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="text-hospital-primary mb-3">
-                    <i className="fas fa-baby fa-3x"></i>
-                  </div>
-                  <Card.Title className="h5">Pediatrics</Card.Title>
-                  <Card.Text className="text-muted">
-                    Specialized medical care for infants, children, and adolescents with gentle approach.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Services />
 
       {/* Departments Section */}
       <section id="departments" className="section-padding bg-light">
         <Container>
           <Row className="text-center mb-5">
             <Col>
-              <h2 className="display-5 fw-bold text-hospital-primary mb-3">Medical Departments</h2>
-              <p className="lead text-muted">
+              <h2 className="display-5 fw-bold mb-3" style={{
+                background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                color: 'transparent',
+                display: 'inline-block'
+              }}>Medical Departments</h2>
+              <p className="lead" style={{
+                background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                color: 'transparent'
+              }}>
                 Specialized departments with state-of-the-art facilities and expert medical staff
               </p>
             </Col>
           </Row>
           <Row className="g-4">
-            <Col md={6} lg={4}>
-              <Card className="h-100 border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="text-hospital-primary me-3">
-                      <i className="fas fa-stethoscope fa-2x"></i>
+            {[
+              {
+                icon: 'fa-stethoscope',
+                title: 'Internal Medicine',
+                description: 'Comprehensive care for adult diseases including diabetes, hypertension, and chronic conditions.'
+              },
+              {
+                icon: 'fa-bone',
+                title: 'Orthopedics',
+                description: 'Treatment of musculoskeletal conditions, joint replacements, and sports injuries.'
+              },
+              {
+                icon: 'fa-brain',
+                title: 'Neurology',
+                description: 'Diagnosis and treatment of nervous system disorders including stroke and epilepsy.'
+              },
+              {
+                icon: 'fa-x-ray',
+                title: 'Radiology',
+                description: 'Advanced imaging services including MRI, CT scans, and ultrasound diagnostics.'
+              },
+              {
+                icon: 'fa-eye',
+                title: 'Ophthalmology',
+                description: 'Complete eye care including cataract surgery, retinal treatments, and vision correction.'
+              },
+              {
+                icon: 'fa-female',
+                title: 'Gynecology',
+                description: 'Women\'s health services including prenatal care, family planning, and gynecological surgery.'
+              }
+            ].map((dept, index) => (
+              <Col md={6} lg={4} key={index}>
+                <Card className="h-100 border-0 shadow-sm">
+                  <Card.Body className="p-4">
+                    <div className="d-flex align-items-center mb-3">
+                      <div className="me-3" style={{ color: '#0dcaf0' }}>
+                        <i className={`fas ${dept.icon} fa-2x`}></i>
+                      </div>
+                      <Card.Title className="h5 mb-0" style={{
+                        background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        color: 'transparent'
+                      }}>{dept.title}</Card.Title>
                     </div>
-                    <Card.Title className="h5 mb-0">Internal Medicine</Card.Title>
-                  </div>
-                  <Card.Text className="text-muted">
-                    Comprehensive care for adult diseases including diabetes, hypertension, and chronic conditions.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={4}>
-              <Card className="h-100 border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="text-hospital-primary me-3">
-                      <i className="fas fa-bone fa-2x"></i>
-                    </div>
-                    <Card.Title className="h5 mb-0">Orthopedics</Card.Title>
-                  </div>
-                  <Card.Text className="text-muted">
-                    Treatment of musculoskeletal conditions, joint replacements, and sports injuries.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={4}>
-              <Card className="h-100 border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="text-hospital-primary me-3">
-                      <i className="fas fa-brain fa-2x"></i>
-                    </div>
-                    <Card.Title className="h5 mb-0">Neurology</Card.Title>
-                  </div>
-                  <Card.Text className="text-muted">
-                    Diagnosis and treatment of nervous system disorders including stroke and epilepsy.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={4}>
-              <Card className="h-100 border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="text-hospital-primary me-3">
-                      <i className="fas fa-x-ray fa-2x"></i>
-                    </div>
-                    <Card.Title className="h5 mb-0">Radiology</Card.Title>
-                  </div>
-                  <Card.Text className="text-muted">
-                    Advanced imaging services including MRI, CT scans, and ultrasound diagnostics.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={4}>
-              <Card className="h-100 border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="text-hospital-primary me-3">
-                      <i className="fas fa-eye fa-2x"></i>
-                    </div>
-                    <Card.Title className="h5 mb-0">Ophthalmology</Card.Title>
-                  </div>
-                  <Card.Text className="text-muted">
-                    Complete eye care including cataract surgery, retinal treatments, and vision correction.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={4}>
-              <Card className="h-100 border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="text-hospital-primary me-3">
-                      <i className="fas fa-female fa-2x"></i>
-                    </div>
-                    <Card.Title className="h5 mb-0">Gynecology</Card.Title>
-                  </div>
-                  <Card.Text className="text-muted">
-                    Women's health services including prenatal care, family planning, and gynecological surgery.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
+                    <Card.Text style={{
+                      background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      color: 'transparent'
+                    }}>
+                      {dept.description}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>
@@ -246,9 +167,21 @@ const HomePage = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={6}>
-              <h2 className="display-5 fw-bold text-hospital-primary mb-4">About HisCure Hospital</h2>
+              <h2 
+                className="display-5 fw-bold mb-4" 
+                style={{
+                  background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  color: 'transparent',
+                  display: 'inline-block'
+                }}
+              >
+                About HisCure Hospital
+              </h2>
               <p className="lead mb-4">
-                For over 25 years, HisCure Hospital has been at the forefront of medical excellence, providing
+                For over 15 years, HisCure Hospital has been at the forefront of medical excellence, providing
                 compassionate care and innovative treatments to our community.
               </p>
               <p className="mb-4">
@@ -280,9 +213,24 @@ const HomePage = () => {
                   </div>
                 </Col>
               </Row>
-              <Button variant="primary" size="lg" href="#contact">
-                Learn More About Us
-              </Button>
+              <Button 
+  variant="outline-primary" 
+  size="lg" 
+  href="#contact"
+  style={{
+    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent',
+    border: '2px solid #0dcaf0',
+    padding: '0.5rem 1.5rem',
+    fontWeight: '600',
+    display: 'inline-block'
+  }}
+>
+  Learn More About Us
+</Button>
             </Col>
             <Col lg={6}>
               <div className="text-center">
@@ -298,7 +246,8 @@ const HomePage = () => {
       </section>
 
       {/* Contact Section */}
-      <div style={{ background: 'linear-gradient(45deg, #9f1f9f, #ff3399)' }}>
+      <div style={{       background: 'linear-gradient(45deg,rgb(93, 111, 138), #0dcaf0)'
+ }}>
         <Contact />
       </div>
     </div>

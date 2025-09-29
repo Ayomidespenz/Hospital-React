@@ -17,7 +17,7 @@ const Contact = () => {
               <FaPhoneAlt className="fa-3x mb-3" />
               <h5>Emergency Hotline</h5>
               <p className="mb-0">
-                <strong>+234 913 215 9156</strong>
+                <strong>+234 7069049315</strong>
                 <br />
                 24/7 Emergency Services
               </p>
@@ -28,11 +28,11 @@ const Contact = () => {
               <FaCalendarAlt className="fa-3x mb-3" />
               <h5>Appointments</h5>
               <p className="mb-0">
-                <strong>+234 913 215 9156</strong>
+                <strong>+234 7069049315</strong>
                 <br />
-                Mon-Fri: 8AM-6PM
+                Mon-Fri: 24/7hrs
                 <br />
-                Sat: 9AM-2PM
+                Sat: 24/7hrs
               </p>
             </div>
           </Col>
@@ -41,11 +41,11 @@ const Contact = () => {
               <FaMapMarkerAlt className="fa-3x mb-3" />
               <h5>Location</h5>
               <p className="mb-0">
-                123 Medical Center Drive
+                No.4 Alhaj Yusuff Str,Ayesan
                 <br />
-                Lekki Phase 1, Lagos, Nigeria
+                Ijebu-Ode, Ogun State, Nigeria
                 <br />
-                <a href="https://goo.gl/maps/aDe9zcQ6zp6GVBgD7" target="_blank" rel="noopener noreferrer" className="text-white">
+                <a href="https://goo.gl/maps/aDe9zcQ6zp6GVBgD7" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none">
                   Get Directions
                 </a>
               </p>
@@ -54,7 +54,7 @@ const Contact = () => {
         </Row>
         <Row className="mt-5">
           <Col className="text-center">
-            <a href="/appointment" className="btn btn-light btn-lg">
+            <a href="/patient/register" className="btn btn-light btn-lg">
               Schedule an Appointment
             </a>
           </Col>

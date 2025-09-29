@@ -10,6 +10,9 @@ import AppointmentBooking from "./components/pages/AppointmentBooking"
 import MedicalRecords from "./components/pages/MedicalRecords"
 import BillingHistory from "./components/pages/BillingHistory"
 import PatientProfile from "./components/pages/PatientProfile"
+// import About from "./components/pages/About"
+import Services from "./components/pages/Services"
+import Doctors from "./components/pages/Doctors"
 import Footer from "./components/pages/Footer"
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -21,6 +24,9 @@ function App() {
         <main style={{ paddingTop: "76px" }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/doctors" element={<Doctors />} />
+            <Route path="/Doctors/:id" element={<Doctors />} />
             <Route path="/patient-portal" element={<PatientPortal />} />
             <Route path="/staff-portal" element={<StaffPortal />} />
             <Route path="/patient/login" element={<PatientLogin />} />

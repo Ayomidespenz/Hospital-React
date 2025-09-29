@@ -94,6 +94,16 @@ const StaffPortal = () => {
     }
   }
 
+  // Gradient text style
+  const gradientText = {
+    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent',
+    display: 'inline-block'
+  };
+
   return (
     <div style={{ marginTop: "76px", minHeight: "100vh", backgroundColor: "var(--hospital-background)" }}>
       <Container className="py-5">
@@ -102,15 +112,30 @@ const StaffPortal = () => {
           <Col>
             <div className="d-flex justify-content-between align-items-center">
               <div>
-                <h1 className="h2 text-hospital-primary mb-1">Welcome, Dr. Sarah Johnson</h1>
-                <p className="text-muted">Cardiology Department | Employee ID: #E001</p>
+                <h1 className="h2 mb-1" style={gradientText}>Welcome, Dr. Sarah Johnson</h1>
+                <p style={{...gradientText, opacity: 0.8}}>Cardiology Department | Employee ID: #E001</p>
               </div>
               <div className="d-flex gap-2">
-                <Button variant="outline-primary">
+                <Button 
+                  variant="outline-primary"
+                  style={{
+                    borderColor: '#5d6f8a',
+                    ...gradientText,
+                    background: 'transparent',
+                    WebkitTextFillColor: 'initial'
+                  }}
+                >
                   <i className="fas fa-calendar-plus me-2"></i>
                   New Appointment
                 </Button>
-                <Button variant="primary">
+                <Button 
+                  style={{
+                    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                    border: 'none',
+                    fontWeight: '500',
+                    color: 'white'
+                  }}
+                >
                   <i className="fas fa-user-plus me-2"></i>
                   Add Patient
                 </Button>
@@ -121,50 +146,24 @@ const StaffPortal = () => {
 
         {/* Quick Stats */}
         <Row className="g-4 mb-5">
-          <Col md={3}>
-            <Card className="border-0 shadow-sm">
-              <Card.Body className="text-center">
-                <div className="text-hospital-primary mb-2">
-                  <i className="fas fa-calendar-day fa-2x"></i>
-                </div>
-                <h3 className="text-hospital-primary mb-1">8</h3>
-                <p className="text-muted small mb-0">Today's Appointments</p>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={3}>
-            <Card className="border-0 shadow-sm">
-              <Card.Body className="text-center">
-                <div className="text-warning mb-2">
-                  <i className="fas fa-tasks fa-2x"></i>
-                </div>
-                <h3 className="text-warning mb-1">5</h3>
-                <p className="text-muted small mb-0">Pending Tasks</p>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={3}>
-            <Card className="border-0 shadow-sm">
-              <Card.Body className="text-center">
-                <div className="text-success mb-2">
-                  <i className="fas fa-users fa-2x"></i>
-                </div>
-                <h3 className="text-success mb-1">24</h3>
-                <p className="text-muted small mb-0">Active Patients</p>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={3}>
-            <Card className="border-0 shadow-sm">
-              <Card.Body className="text-center">
-                <div className="text-info mb-2">
-                  <i className="fas fa-flask fa-2x"></i>
-                </div>
-                <h3 className="text-info mb-1">12</h3>
-                <p className="text-muted small mb-0">Lab Results Pending</p>
-              </Card.Body>
-            </Card>
-          </Col>
+          {[
+            { icon: 'calendar-day', value: '8', label: "Today's Appointments" },
+            { icon: 'tasks', value: '5', label: 'Pending Tasks' },
+            { icon: 'users', value: '24', label: 'Active Patients' },
+            { icon: 'flask', value: '12', label: 'Lab Results Pending' }
+          ].map((stat, index) => (
+            <Col md={3} key={index}>
+              <Card className="border-0 shadow-sm">
+                <Card.Body className="text-center">
+                  <div className="mb-2" style={gradientText}>
+                    <i className={`fas fa-${stat.icon} fa-2x`}></i>
+                  </div>
+                  <h3 className="mb-1" style={gradientText}>{stat.value}</h3>
+                  <p className="small mb-0" style={{...gradientText, opacity: 0.9}}>{stat.label}</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
         </Row>
 
         {/* Main Content Tabs */}

@@ -2,6 +2,16 @@ import { Container, Row, Col, Card, Button, Badge, Table } from "react-bootstrap
 import { Link } from "react-router-dom"
 
 const PatientPortal = () => {
+  // Gradient text style
+  const gradientText = {
+    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent',
+    display: 'inline-block'
+  };
+
   // Mock data for demonstration
   const upcomingAppointments = [
     {
@@ -36,10 +46,22 @@ const PatientPortal = () => {
           <Col>
             <div className="d-flex justify-content-between align-items-center">
               <div>
-                <h1 className="h2 text-hospital-primary mb-1">Welcome back, John Doe</h1>
-                <p className="text-muted">Patient ID: #P12345 | Last visit: January 5, 2025</p>
+                <h1 className="h2 mb-1" style={gradientText}>
+                  Welcome back, John Doe
+                </h1>
+                <p style={{...gradientText, opacity: 0.8}}>
+                  Patient ID: #P12345 | Last visit: January 5, 2025
+                </p>
               </div>
-              <Button variant="primary" as={Link} to="/patient/appointments">
+              <Button 
+                as={Link} 
+                to="/patient/appointments"
+                style={{
+                  background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                  border: 'none',
+                  fontWeight: '500'
+                }}
+              >
                 <i className="fas fa-calendar-plus me-2"></i>
                 Book Appointment
               </Button>
@@ -52,12 +74,21 @@ const PatientPortal = () => {
           <Col md={3}>
             <Card className="h-100 border-0 shadow-sm text-center">
               <Card.Body className="p-4">
-                <div className="text-hospital-primary mb-3">
+                <div className="mb-3" style={gradientText}>
                   <i className="fas fa-calendar-alt fa-2x"></i>
                 </div>
-                <Card.Title className="h6">Appointments</Card.Title>
-                <Card.Text className="text-muted small">View and manage your appointments</Card.Text>
-                <Button variant="outline-primary" size="sm" as={Link} to="/patient/appointments">
+                <Card.Title className="h6" style={gradientText}>Appointments</Card.Title>
+                <p style={{...gradientText, opacity: 0.8, fontSize: '0.875rem'}}>View and manage your appointments</p>
+                <Button 
+                  variant="outline-primary" 
+                  size="sm" 
+                  as={Link} 
+                  to="/patient/appointments"
+                  style={{
+                    borderColor: '#5d6f8a',
+                    ...gradientText
+                  }}
+                >
                   Manage
                 </Button>
               </Card.Body>
@@ -66,12 +97,21 @@ const PatientPortal = () => {
           <Col md={3}>
             <Card className="h-100 border-0 shadow-sm text-center">
               <Card.Body className="p-4">
-                <div className="text-hospital-primary mb-3">
+                <div className="mb-3" style={gradientText}>
                   <i className="fas fa-file-medical fa-2x"></i>
                 </div>
-                <Card.Title className="h6">Medical Records</Card.Title>
-                <Card.Text className="text-muted small">Access your medical history</Card.Text>
-                <Button variant="outline-primary" size="sm" as={Link} to="/patient/records">
+                <Card.Title className="h6" style={gradientText}>Medical Records</Card.Title>
+                <p style={{...gradientText, opacity: 0.8, fontSize: '0.875rem'}}>Access your medical history</p>
+                <Button 
+                  variant="outline-primary" 
+                  size="sm" 
+                  as={Link} 
+                  to="/patient/records"
+                  style={{
+                    borderColor: '#5d6f8a',
+                    ...gradientText
+                  }}
+                >
                   View Records
                 </Button>
               </Card.Body>
@@ -80,12 +120,21 @@ const PatientPortal = () => {
           <Col md={3}>
             <Card className="h-100 border-0 shadow-sm text-center">
               <Card.Body className="p-4">
-                <div className="text-hospital-primary mb-3">
+                <div className="mb-3" style={gradientText}>
                   <i className="fas fa-receipt fa-2x"></i>
                 </div>
-                <Card.Title className="h6">Billing</Card.Title>
-                <Card.Text className="text-muted small">View bills and payment history</Card.Text>
-                <Button variant="outline-primary" size="sm" as={Link} to="/patient/billing">
+                <Card.Title className="h6" style={gradientText}>Billing</Card.Title>
+                <p style={{...gradientText, opacity: 0.8, fontSize: '0.875rem'}}>View bills and payment history</p>
+                <Button 
+                  variant="outline-primary" 
+                  size="sm" 
+                  as={Link} 
+                  to="/patient/billing"
+                  style={{
+                    borderColor: '#5d6f8a',
+                    ...gradientText
+                  }}
+                >
                   View Bills
                 </Button>
               </Card.Body>
@@ -94,12 +143,21 @@ const PatientPortal = () => {
           <Col md={3}>
             <Card className="h-100 border-0 shadow-sm text-center">
               <Card.Body className="p-4">
-                <div className="text-hospital-primary mb-3">
+                <div className="mb-3" style={gradientText}>
                   <i className="fas fa-user-edit fa-2x"></i>
                 </div>
-                <Card.Title className="h6">Profile</Card.Title>
-                <Card.Text className="text-muted small">Update your personal information</Card.Text>
-                <Button variant="outline-primary" size="sm" as={Link} to="/patient/profile">
+                <Card.Title className="h6" style={gradientText}>Profile</Card.Title>
+                <p style={{...gradientText, opacity: 0.8, fontSize: '0.875rem'}}>Update your personal information</p>
+                <Button 
+                  variant="outline-primary" 
+                  size="sm" 
+                  as={Link} 
+                  to="/patient/profile"
+                  style={{
+                    borderColor: '#5d6f8a',
+                    ...gradientText
+                  }}
+                >
                   Edit Profile
                 </Button>
               </Card.Body>
@@ -107,8 +165,8 @@ const PatientPortal = () => {
           </Col>
         </Row>
 
+        {/* Upcoming Appointments */}
         <Row>
-          {/* Upcoming Appointments */}
           <Col lg={8}>
             <Card className="border-0 shadow-sm mb-4">
               <Card.Header className="bg-white border-0 py-3">

@@ -11,6 +11,16 @@ const PatientLogin = () => {
   })
   const [showAlert, setShowAlert] = useState(false)
 
+  // Gradient text style
+  const gradientText = {
+    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent',
+    display: 'inline-block'
+  };
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -35,9 +45,9 @@ const PatientLogin = () => {
             <Card className="shadow border-0">
               <Card.Body className="p-5">
                 <div className="text-center mb-4">
-                  <i className="fas fa-user-circle fa-3x text-hospital-primary mb-3"></i>
-                  <h2 className="h3 text-hospital-primary">Patient Login</h2>
-                  <p className="text-muted">Access your medical records and appointments</p>
+                  <i className="fas fa-user-circle fa-3x mb-3" style={gradientText}></i>
+                  <h2 className="h3 mb-1" style={gradientText}>Patient Login</h2>
+                  <p style={{...gradientText, opacity: 0.8}}>Access your medical records and appointments</p>
                 </div>
 
                 {showAlert && (
@@ -49,7 +59,7 @@ const PatientLogin = () => {
 
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3">
-                    <Form.Label>Email Address</Form.Label>
+                    <Form.Label style={gradientText}>Email Address</Form.Label>
                     <Form.Control
                       type="email"
                       name="email"
@@ -57,11 +67,12 @@ const PatientLogin = () => {
                       onChange={handleChange}
                       placeholder="Enter your email"
                       required
+                      style={{borderColor: '#5d6f8a'}}
                     />
                   </Form.Group>
 
                   <Form.Group className="mb-4">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label style={gradientText}>Password</Form.Label>
                     <Form.Control
                       type="password"
                       name="password"
@@ -69,25 +80,53 @@ const PatientLogin = () => {
                       onChange={handleChange}
                       placeholder="Enter your password"
                       required
+                      style={{borderColor: '#5d6f8a'}}
                     />
                   </Form.Group>
 
                   <div className="d-flex justify-content-between align-items-center mb-4">
-                    <Form.Check type="checkbox" label="Remember me" />
-                    <Link to="#" className="text-hospital-primary text-decoration-none">
+                    <Form.Check 
+                      type="checkbox" 
+                      label={
+                        <span style={gradientText}>Remember me</span>
+                      } 
+                    />
+                    <Link 
+                      to="#" 
+                      style={{
+                        ...gradientText,
+                        textDecoration: 'underline !important'
+                      }}
+                    >
                       Forgot Password?
                     </Link>
                   </div>
 
-                  <Button type="submit" variant="primary" size="lg" className="w-100 mb-3">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-100 mb-3"
+                    style={{
+                      background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                      border: 'none',
+                      fontWeight: '500'
+                    }}
+                  >
                     <i className="fas fa-sign-in-alt me-2"></i>
                     Sign In
                   </Button>
 
                   <div className="text-center">
-                    <p className="text-muted">
+                    <p style={{...gradientText, opacity: 0.9}}>
                       Don't have an account?{" "}
-                      <Link to="/patient/register" className="text-hospital-primary text-decoration-none">
+                      <Link 
+                        to="/patient/register" 
+                        className="text-decoration-none"
+                        style={{
+                          ...gradientText,
+                          textDecoration: 'underline !important'
+                        }}
+                      >
                         Register here
                       </Link>
                     </p>

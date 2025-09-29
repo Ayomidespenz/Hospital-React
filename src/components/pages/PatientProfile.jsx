@@ -7,6 +7,16 @@ const PatientProfile = () => {
   const [activeTab, setActiveTab] = useState("personal")
   const [showAlert, setShowAlert] = useState(false)
 
+  // Gradient text style
+  const gradientText = {
+    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent',
+    display: 'inline-block'
+  };
+
   const [personalInfo, setPersonalInfo] = useState({
     firstName: "John",
     lastName: "Doe",
@@ -70,11 +80,11 @@ const PatientProfile = () => {
       <Container className="py-5">
         <Row className="mb-4">
           <Col>
-            <h1 className="h2 text-hospital-primary mb-1">
+            <h1 className="h2 mb-1" style={gradientText}>
               <i className="fas fa-user-edit me-2"></i>
               Patient Profile
             </h1>
-            <p className="text-muted">Manage your personal information and preferences</p>
+            <p style={{...gradientText, opacity: 0.8}}>Manage your personal information and preferences</p>
           </Col>
         </Row>
 
@@ -93,31 +103,35 @@ const PatientProfile = () => {
               className="border-bottom"
               style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
             >
-              <Tab eventKey="personal" title="Personal Information">
+              <Tab eventKey="personal" title={
+                <span style={gradientText}>Personal Information</span>
+              }>
                 <div className="p-4">
                   <Form onSubmit={handleSubmit}>
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>First Name</Form.Label>
+                          <Form.Label style={gradientText}>First Name</Form.Label>
                           <Form.Control
                             type="text"
                             name="firstName"
                             value={personalInfo.firstName}
                             onChange={handlePersonalChange}
                             required
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Last Name</Form.Label>
+                          <Form.Label style={gradientText}>Last Name</Form.Label>
                           <Form.Control
                             type="text"
                             name="lastName"
                             value={personalInfo.lastName}
                             onChange={handlePersonalChange}
                             required
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
@@ -126,25 +140,27 @@ const PatientProfile = () => {
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Email Address</Form.Label>
+                          <Form.Label style={gradientText}>Email Address</Form.Label>
                           <Form.Control
                             type="email"
                             name="email"
                             value={personalInfo.email}
                             onChange={handlePersonalChange}
                             required
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Phone Number</Form.Label>
+                          <Form.Label style={gradientText}>Phone Number</Form.Label>
                           <Form.Control
                             type="tel"
                             name="phone"
                             value={personalInfo.phone}
                             onChange={handlePersonalChange}
                             required
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
@@ -153,20 +169,21 @@ const PatientProfile = () => {
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Date of Birth</Form.Label>
+                          <Form.Label style={gradientText}>Date of Birth</Form.Label>
                           <Form.Control
                             type="date"
                             name="dateOfBirth"
                             value={personalInfo.dateOfBirth}
                             onChange={handlePersonalChange}
                             required
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Gender</Form.Label>
-                          <Form.Select name="gender" value={personalInfo.gender} onChange={handlePersonalChange}>
+                          <Form.Label style={gradientText}>Gender</Form.Label>
+                          <Form.Select name="gender" value={personalInfo.gender} onChange={handlePersonalChange} style={{borderColor: '#5d6f8a'}}>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="other">Other</option>
@@ -176,7 +193,7 @@ const PatientProfile = () => {
                     </Row>
 
                     <Form.Group className="mb-3">
-                      <Form.Label>Address</Form.Label>
+                      <Form.Label style={gradientText}>Address</Form.Label>
                       <Form.Control
                         as="textarea"
                         rows={2}
@@ -184,31 +201,34 @@ const PatientProfile = () => {
                         value={personalInfo.address}
                         onChange={handlePersonalChange}
                         required
+                        style={{borderColor: '#5d6f8a'}}
                       />
                     </Form.Group>
 
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Emergency Contact Name</Form.Label>
+                          <Form.Label style={gradientText}>Emergency Contact Name</Form.Label>
                           <Form.Control
                             type="text"
                             name="emergencyContact"
                             value={personalInfo.emergencyContact}
                             onChange={handlePersonalChange}
                             required
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Emergency Contact Phone</Form.Label>
+                          <Form.Label style={gradientText}>Emergency Contact Phone</Form.Label>
                           <Form.Control
                             type="tel"
                             name="emergencyPhone"
                             value={personalInfo.emergencyPhone}
                             onChange={handlePersonalChange}
                             required
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
@@ -222,14 +242,16 @@ const PatientProfile = () => {
                 </div>
               </Tab>
 
-              <Tab eventKey="medical" title="Medical Information">
+              <Tab eventKey="medical" title={
+                <span style={gradientText}>Medical Information</span>
+              }>
                 <div className="p-4">
                   <Form onSubmit={handleSubmit}>
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Blood Type</Form.Label>
-                          <Form.Select name="bloodType" value={medicalInfo.bloodType} onChange={handleMedicalChange}>
+                          <Form.Label style={gradientText}>Blood Type</Form.Label>
+                          <Form.Select name="bloodType" value={medicalInfo.bloodType} onChange={handleMedicalChange} style={{borderColor: '#5d6f8a'}}>
                             <option value="A+">A+</option>
                             <option value="A-">A-</option>
                             <option value="B+">B+</option>
@@ -243,19 +265,20 @@ const PatientProfile = () => {
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Primary Physician</Form.Label>
+                          <Form.Label style={gradientText}>Primary Physician</Form.Label>
                           <Form.Control
                             type="text"
                             name="primaryPhysician"
                             value={medicalInfo.primaryPhysician}
                             onChange={handleMedicalChange}
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
                     </Row>
 
                     <Form.Group className="mb-3">
-                      <Form.Label>Allergies</Form.Label>
+                      <Form.Label style={gradientText}>Allergies</Form.Label>
                       <Form.Control
                         as="textarea"
                         rows={2}
@@ -263,11 +286,12 @@ const PatientProfile = () => {
                         value={medicalInfo.allergies}
                         onChange={handleMedicalChange}
                         placeholder="List any known allergies..."
+                        style={{borderColor: '#5d6f8a'}}
                       />
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                      <Form.Label>Chronic Conditions</Form.Label>
+                      <Form.Label style={gradientText}>Chronic Conditions</Form.Label>
                       <Form.Control
                         as="textarea"
                         rows={2}
@@ -275,11 +299,12 @@ const PatientProfile = () => {
                         value={medicalInfo.chronicConditions}
                         onChange={handleMedicalChange}
                         placeholder="List any chronic medical conditions..."
+                        style={{borderColor: '#5d6f8a'}}
                       />
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                      <Form.Label>Current Medications</Form.Label>
+                      <Form.Label style={gradientText}>Current Medications</Form.Label>
                       <Form.Control
                         as="textarea"
                         rows={3}
@@ -287,29 +312,32 @@ const PatientProfile = () => {
                         value={medicalInfo.currentMedications}
                         onChange={handleMedicalChange}
                         placeholder="List current medications with dosages..."
+                        style={{borderColor: '#5d6f8a'}}
                       />
                     </Form.Group>
 
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Insurance Provider</Form.Label>
+                          <Form.Label style={gradientText}>Insurance Provider</Form.Label>
                           <Form.Control
                             type="text"
                             name="insuranceProvider"
                             value={medicalInfo.insuranceProvider}
                             onChange={handleMedicalChange}
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Insurance ID</Form.Label>
+                          <Form.Label style={gradientText}>Insurance ID</Form.Label>
                           <Form.Control
                             type="text"
                             name="insuranceId"
                             value={medicalInfo.insuranceId}
                             onChange={handleMedicalChange}
+                            style={{borderColor: '#5d6f8a'}}
                           />
                         </Form.Group>
                       </Col>
@@ -323,17 +351,20 @@ const PatientProfile = () => {
                 </div>
               </Tab>
 
-              <Tab eventKey="preferences" title="Preferences">
+              <Tab eventKey="preferences" title={
+                <span style={gradientText}>Preferences</span>
+              }>
                 <div className="p-4">
                   <Form onSubmit={handleSubmit}>
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Preferred Language</Form.Label>
+                          <Form.Label style={gradientText}>Preferred Language</Form.Label>
                           <Form.Select
                             name="preferredLanguage"
                             value={preferences.preferredLanguage}
                             onChange={handlePreferencesChange}
+                            style={{borderColor: '#5d6f8a'}}
                           >
                             <option value="English">English</option>
                             <option value="Spanish">Spanish</option>
@@ -344,11 +375,12 @@ const PatientProfile = () => {
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Preferred Communication Method</Form.Label>
+                          <Form.Label style={gradientText}>Preferred Communication Method</Form.Label>
                           <Form.Select
                             name="communicationMethod"
                             value={preferences.communicationMethod}
                             onChange={handlePreferencesChange}
+                            style={{borderColor: '#5d6f8a'}}
                           >
                             <option value="email">Email</option>
                             <option value="phone">Phone</option>
@@ -359,7 +391,7 @@ const PatientProfile = () => {
                       </Col>
                     </Row>
 
-                    <h6 className="text-hospital-primary mb-3">Notification Preferences</h6>
+                    <h6 className="text-hospital-primary mb-3" style={gradientText}>Notification Preferences</h6>
 
                     <Form.Group className="mb-3">
                       <Form.Check

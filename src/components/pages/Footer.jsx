@@ -26,21 +26,21 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: <FaMapMarkerAlt className="me-2" />,
-      text: "123 Medical Center Drive, Lekki Phase 1, Lagos, Nigeria"
+      text: "No.4 Prince Alhaji Yusuff str, Ayesan, Ijebu-Ode, Ogun State, Nigeria"
     },
     {
       icon: <FaPhoneAlt className="me-2" />,
-      text: "+234 913 215 9156",
-      link: "tel:+2349132159156"
+      text: "+234 7069049315",
+      link: "tel:+2347069049315"
     },
     {
-      icon: <FaEnvelope className="me-2" />,
-      text: "info@arcticgynae.com",
-      link: "mailto:info@arcticgynae.com"
+      icon: <FaEnvelope className="me-3 mb-1" />,
+      text: "info@hiscurehospital.com",
+      link: "mailto:info@hiscurehospital.com"
     },
     {
       icon: <FaClock className="me-2" />,
-      text: "Mon - Fri: 8:00 AM - 6:00 PM\nSat: 9:00 AM - 2:00 PM"
+      text: "Mon - Fri: 24/7hrs\nSat: 24/7hrs"
     }
   ];
 
@@ -54,8 +54,7 @@ const Footer = () => {
 
   return (
     <footer className="text-white pt-5 pb-3" style={{ 
-      background: 'linear-gradient(45deg, #9f1f9f, #ff3399)',
-      backgroundColor: 'linear-gradient(45deg, #9f1f9f, #ff3399)'
+        background: 'linear-gradient(45deg,rgb(93, 111, 138), #0dcaf0)' ,       backgroundColor: 'linear-gradient(45deg,rgb(93, 111, 138), #0dcaf0)'
     }}>
       <Container>
         <Row className="g-4">
@@ -141,7 +140,7 @@ const Footer = () => {
         <Row className="align-items-center">
           <Col md={6} className="mb-3 mb-md-0">
             <p className="mb-0 text-white">
-              &copy; {currentYear} Arctic Gynae Centre. All rights reserved.
+              &copy; {currentYear} HisCure Hospital. All rights reserved.
             </p>
           </Col>
           <Col md={6} className="text-md-end">
