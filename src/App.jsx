@@ -24,6 +24,9 @@ import FertilityServices from "./components/pages/services/FertilityServices"
 import MinimallyInvasiveSurgery from "./components/pages/services/MinimallyInvasiveSurgery"
 import WellWomanExams from "./components/pages/services/WellWomanExams"
 import ContraceptionFamilyPlanning from "./components/pages/services/ContraceptionFamilyPlanning"
+import LaboratoryServices from "./components/pages/services/LaboratoryServices"
+import InternalMedicine from "./components/pages/services/InternalMedicine"
+import Ophthalmology from "./components/pages/services/Ophthalmology"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -45,6 +48,9 @@ function App() {
             <Route path="/services/minimally-invasive-surgery" element={<MinimallyInvasiveSurgery />} />
             <Route path="/services/well-woman-exams" element={<WellWomanExams />} />
             <Route path="/services/contraception-family-planning" element={<ContraceptionFamilyPlanning />} />
+            <Route path="/services/laboratory-services" element={<LaboratoryServices />} />
+            <Route path="/services/internal-medicine" element={<InternalMedicine />} />
+            <Route path="/services/ophthalmology" element={<Ophthalmology />} />
             
             <Route path="/doctors" element={<Doctors />} />
             <Route path="/Doctors/:id" element={<Doctors />} />

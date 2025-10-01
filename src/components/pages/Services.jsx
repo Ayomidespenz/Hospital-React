@@ -8,6 +8,7 @@ const Services = () => {
   const services = [
     {
       id: 1,
+      route: 'gynecological-care',
       icon: (
         <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
@@ -29,6 +30,7 @@ const Services = () => {
     },
     {
       id: 2,
+      route: 'prenatal-postnatal-care',
       icon: (
         <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
@@ -50,6 +52,7 @@ const Services = () => {
     },
     {
       id: 3,
+      route: 'fertility-services',
       icon: (
         <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
@@ -71,6 +74,7 @@ const Services = () => {
     },
     {
       id: 4,
+      route: 'minimally-invasive-surgery',
       icon: (
         <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
@@ -91,6 +95,7 @@ const Services = () => {
     },
     {
       id: 5,
+      route: 'well-woman-exams',
       icon: (
         <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
@@ -111,6 +116,7 @@ const Services = () => {
     },
     {
       id: 6,
+      route: 'contraception-family-planning',
       icon: (
         <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
@@ -131,11 +137,12 @@ const Services = () => {
     },
     {
       id: 7,
+      route: 'laboratory-services',
       icon: (
         <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
-            src="/fertility.jpeg" 
-            alt="Fertility Services" 
+            src="/lab.jpeg" 
+            alt="Laboratory Services" 
             style={{ 
               width: '100%', 
               height: '100%', 
@@ -145,17 +152,19 @@ const Services = () => {
             className="hover-scale"
           />
         </div>
-      ),      title: 'Laboratory and Diagnostic Services',
-      description: 'A full range of birth control options tailored to your lifestyle and health needs.',
-      features: ['IUDs', 'Implants', 'Birth Control Pills']
+      ),
+      title: 'Laboratory Services',
+      description: 'State-of-the-art laboratory testing and diagnostic services providing accurate and timely results for comprehensive patient care and treatment planning.',
+      features: ['Blood Tests', 'Urinalysis', 'Hormone Panels', 'Microbiology']
     },
     {
       id: 8,
+      route: 'internal-medicine',
       icon: (
         <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
-            src="/fertility.jpeg" 
-            alt="Fertility Services" 
+            src="/internal.jpeg" 
+            alt="Internal Medicine" 
             style={{ 
               width: '100%', 
               height: '100%', 
@@ -165,17 +174,19 @@ const Services = () => {
             className="hover-scale"
           />
         </div>
-      ),      title: 'Internal Medicine',
-      description: 'A full range of birth control options tailored to your lifestyle and health needs.',
-      features: ['IUDs', 'Implants', 'Birth Control Pills']
+      ),
+      title: 'Internal Medicine',
+      description: 'Comprehensive medical care for adults, focusing on the prevention, diagnosis, and treatment of a wide range of adult health conditions and diseases.',
+      features: ['Chronic Disease Management', 'Preventive Care', 'Health Screenings', 'Vaccinations']
     },
     {
       id: 9,
+      route: 'ophthalmology',
       icon: (
         <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
-            src="/fertility.jpeg" 
-            alt="Fertility Services" 
+            src="/opthalmology.jpeg" 
+            alt="Ophthalmology" 
             style={{ 
               width: '100%', 
               height: '100%', 
@@ -185,9 +196,10 @@ const Services = () => {
             className="hover-scale"
           />
         </div>
-      ),      title: 'Opthalmology Surgery',
-      description: 'A full range of birth control options tailored to your lifestyle and health needs.',
-      features: ['IUDs', 'Implants', 'Birth Control Pills']
+      ),
+      title: 'Ophthalmology',
+      description: 'Expert eye care services specializing in the diagnosis, treatment, and management of eye diseases and vision disorders for patients of all ages.',
+      features: ['Eye Exams', 'Glaucoma Treatment', 'Cataract Evaluation', 'Vision Correction']
     },
   ];
 
@@ -233,58 +245,59 @@ const Services = () => {
           {services.map((service, index) => (
             <Col md={6} lg={4} key={service.id} className="fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="card h-100 border-0 shadow-sm hover-scale transition-all">
-                <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="text-decoration-none">
-                  <div className="card-body p-4 text-center">
-                    <div className="icon-box bg-primary-soft rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style={{width: '80px', height: '80px'}}>
-                      {service.icon}
-                    </div>
-                    <h4 className="h5 mb-3" style={{
-                      background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                      color: 'transparent'
-                    }}>{service.title}</h4>
-                    <p className="mb-4" style={{
-                      background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                      color: 'transparent'
-                    }}>{service.description}</p>
-                    <div className="mt-auto">
-                      <ul className="list-unstyled text-start">
-                        {service.features.map((feature, i) => (
-                          <li key={i} className="mb-2" style={{
-                            background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            backgroundClip: 'text',
-                            opacity: 0.9
-                          }}>
-                            <i className="fas fa-check-circle text-success me-2"></i>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <Button 
-                      variant="outline-primary" 
-                      className="mt-3"
-                      style={{
-                        borderColor: '#5d6f8a',
-                        background: 'transparent',
-                        backgroundImage: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text',
-                        color: 'transparent'
-                      }}
-                    >
-                      Learn More <i className="fas fa-arrow-right ms-2"></i>
-                    </Button>
+                <div className="card-body p-4 text-center">
+                  <div className="icon-box bg-primary-soft rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style={{width: '80px', height: '80px'}}>
+                    {service.icon}
                   </div>
-                </Link>
+                  <h4 className="h5 mb-3" style={{
+                    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    color: 'transparent'
+                  }}>{service.title}</h4>
+                  <p className="mb-4" style={{
+                    background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    color: 'transparent'
+                  }}>{service.description}</p>
+                  <div className="mt-auto">
+                    <ul className="list-unstyled text-start">
+                      {service.features.map((feature, i) => (
+                        <li key={i} className="mb-2" style={{
+                          background: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          opacity: 0.9
+                        }}>
+                          <i className="fas fa-check-circle text-success me-2"></i>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Link 
+                    to={`/services/${service.route}`}
+                    className="btn mt-3"
+                    style={{
+                      borderColor: '#5d6f8a',
+                      background: 'transparent',
+                      backgroundImage: 'linear-gradient(45deg, rgb(93, 111, 138), #0dcaf0)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      color: 'transparent',
+                      padding: '0.375rem 1.5rem',
+                      border: '1px solid #5d6f8a',
+                      borderRadius: '50rem'
+                    }}
+                  >
+                    Learn More <i className="fas fa-arrow-right ms-2"></i>
+                  </Link>
+                </div>
               </div>
             </Col>
           ))}
@@ -348,7 +361,7 @@ const Services = () => {
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(20px);
+            transforanslateY(20px);
           }
           to {
             opacity: 1;
