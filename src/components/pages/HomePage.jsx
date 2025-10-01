@@ -23,7 +23,7 @@ const HomePage = () => {
         <Container className="position-relative" style={{ zIndex: 1, paddingTop: '120px', paddingBottom: '120px' }}>
           <Row className="align-items-center">
             <Col lg={6} className="text-black text-start">
-              <h1 style={{ 
+              <h5 style={{ 
                 fontSize: '3.0rem', 
                 fontWeight: 'bold',
                 marginBottom: '1.5rem',
@@ -32,7 +32,7 @@ const HomePage = () => {
                 Quality Care<br />
                 for Every Stage<br />
                 Of Womanhood
-              </h1>
+              </h5>
               <p className="lead mb-4" style={{ fontSize: '1.2rem', textColor: 'black', fontWeight:'bold' }}>
                 Experience Exceptional Healthcare with HisCure Hospital - 
                 Your Trusted Specialist Healthcare Provider.
@@ -105,6 +105,21 @@ const HomePage = () => {
                 title: 'Internal Medicine',
                 description: 'Comprehensive care for adult diseases including diabetes, hypertension, and chronic conditions.'
               },
+                {
+                icon: 'fa-stethoscope',
+                title: 'General Surgery',
+                description: 'Comprehensive care for adult diseases including diabetes, hypertension, and chronic conditions.'
+              },
+                {
+                icon: 'fa-stethoscope',
+                title: 'Pedeatrics Surgery ',
+                description: 'Comprehensive care for adult diseases including diabetes, hypertension, and chronic conditions.'
+              },
+                {
+                icon: 'fa-stethoscope',
+                title: 'Geriatrics Surgery',
+                description: 'Comprehensive care for adult diseases including diabetes, hypertension, and chronic conditions.'
+              },
               {
                 icon: 'fa-bone',
                 title: 'Orthopedics',
@@ -127,7 +142,7 @@ const HomePage = () => {
               },
               {
                 icon: 'fa-female',
-                title: 'Gynecology',
+                title: 'Gynecology and Obstetrics',
                 description: 'Women\'s health services including prenatal care, family planning, and gynecological surgery.'
               }
             ].map((dept, index) => (

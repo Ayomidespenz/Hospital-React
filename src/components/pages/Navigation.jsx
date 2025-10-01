@@ -1,6 +1,7 @@
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
+
 const Navigation = () => {
   // Gradient text style for navigation items
   const gradientText = {
@@ -30,8 +31,8 @@ const Navigation = () => {
             >
               <NavDropdown.Item as="a" href="#emergency" style={gradientText}>Emergency Care</NavDropdown.Item>
               <NavDropdown.Item as="a" href="#surgery" style={gradientText}>Surgery</NavDropdown.Item>
-              <NavDropdown.Item as="a" href="#cardiology" style={gradientText}>Cardiology</NavDropdown.Item>
-              <NavDropdown.Item as="a" href="#pediatrics" style={gradientText}>Pediatrics</NavDropdown.Item>
+              <Nav.Link as={Link} to="/services/gynecological-care" style={gradientText}>Gynecological Care</Nav.Link>
+              <Nav.Link as={Link} to="/services/prenatal-postnatal-care" style={gradientText}>PrenatalPostnatalCare</Nav.Link>
             </NavDropdown>
             <NavDropdown 
               title={<span style={gradientText}>Departments</span>} 

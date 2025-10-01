@@ -22,7 +22,7 @@ const Contact = () => {
               <FaPhoneAlt className="fa-3x mb-3 text-white" />
               <h5 className="text-white">Emergency Hotline</h5>
               <p className="mb-0 text-white">
-                <strong>+234 7069049315</strong>
+                <strong>+234 706 904 9315 / +234 805 601 1362</strong>
                 <br />
                 24/7 Emergency Services
               </p>
@@ -33,7 +33,7 @@ const Contact = () => {
               <FaCalendarAlt className="fa-3x mb-3 text-white" />
               <h5 className="text-white">Appointments</h5>
               <p className="mb-0 text-white">
-                <strong>+234 7069049315</strong>
+                <strong>+234 706 904 9315 / +234 805 601 1362</strong>
                 <br />
                 Mon-Fri: 24/7hrs
                 <br />
@@ -46,7 +46,7 @@ const Contact = () => {
               <FaMapMarkerAlt className="fa-3x mb-3 text-white" />
               <h5 className="text-white">Location</h5>
               <p className="mb-0 text-white">
-                No.4 Alhaj Yusuff Str,Ayesan
+                No.18 Prince Alhaji Yusuff Str,Ayesan
                 <br />
                 Ijebu-Ode, Ogun State, Nigeria
                 <br />

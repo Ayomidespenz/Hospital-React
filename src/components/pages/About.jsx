@@ -21,7 +21,7 @@ const About = () => {
               About HisCure Hospital
             </h2>
             <p className="lead mb-4">
-              For over 15 years, HisCure Hospital has been at the forefront of medical excellence, providing
+              For over 14+ years, HisCure Hospital has been at the forefront of medical excellence, providing
               compassionate care and innovative treatments to our community.
             </p>
             <p className="mb-4">
@@ -36,7 +36,7 @@ const About = () => {
                     <i className="fas fa-award fa-2x"></i>
                   </div>
                   <div>
-                    <h5 className="mb-1">15+ Years</h5>
+                    <h5 className="mb-1">14+ Years</h5>
                     <p className="text-muted mb-0">of Excellence</p>
                   </div>
                 </div>
@@ -49,7 +49,7 @@ const About = () => {
                 </div>
               </Col>
             </Row>
-            <Button 
+            {/* <Button 
               variant="outline-primary" 
               size="lg" 
               href="#contact"
@@ -66,7 +66,7 @@ const About = () => {
               }}
             >
               Learn More About Us
-            </Button>
+            </Button> */}
           </Col>
           <Col lg={6}>
             <div className="text-center">

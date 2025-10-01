@@ -129,6 +129,66 @@ const Services = () => {
       description: 'A full range of birth control options tailored to your lifestyle and health needs.',
       features: ['IUDs', 'Implants', 'Birth Control Pills']
     },
+    {
+      id: 7,
+      icon: (
+        <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img 
+            src="/fertility.jpeg" 
+            alt="Fertility Services" 
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover',
+              transition: 'transform 0.3s ease'
+            }}
+            className="hover-scale"
+          />
+        </div>
+      ),      title: 'Laboratory and Diagnostic Services',
+      description: 'A full range of birth control options tailored to your lifestyle and health needs.',
+      features: ['IUDs', 'Implants', 'Birth Control Pills']
+    },
+    {
+      id: 8,
+      icon: (
+        <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img 
+            src="/fertility.jpeg" 
+            alt="Fertility Services" 
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover',
+              transition: 'transform 0.3s ease'
+            }}
+            className="hover-scale"
+          />
+        </div>
+      ),      title: 'Internal Medicine',
+      description: 'A full range of birth control options tailored to your lifestyle and health needs.',
+      features: ['IUDs', 'Implants', 'Birth Control Pills']
+    },
+    {
+      id: 9,
+      icon: (
+        <div className="icon-image-container" style={{ width: '100px', height: '80px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img 
+            src="/fertility.jpeg" 
+            alt="Fertility Services" 
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover',
+              transition: 'transform 0.3s ease'
+            }}
+            className="hover-scale"
+          />
+        </div>
+      ),      title: 'Opthalmology Surgery',
+      description: 'A full range of birth control options tailored to your lifestyle and health needs.',
+      features: ['IUDs', 'Implants', 'Birth Control Pills']
+    },
   ];
 
   return (

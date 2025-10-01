@@ -26,11 +26,11 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: <FaMapMarkerAlt className="me-2" />,
-      text: "No.4 Prince Alhaji Yusuff str, Ayesan, Ijebu-Ode, Ogun State, Nigeria"
+      text: "No.18 Prince Alhaji Yusuff str, Ayesan, Ijebu-Ode, Ogun State, Nigeria"
     },
     {
       icon: <FaPhoneAlt className="me-2" />,
-      text: "+234 7069049315",
+      text: "+234 706 904 9315 / +234 805 601 1362",
       link: "tel:+2347069049315"
     },
     {

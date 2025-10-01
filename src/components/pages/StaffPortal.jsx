@@ -112,8 +112,8 @@ const StaffPortal = () => {
           <Col>
             <div className="d-flex justify-content-between align-items-center">
               <div>
-                <h1 className="h2 mb-1" style={gradientText}>Welcome, Dr. Sarah Johnson</h1>
-                <p style={{...gradientText, opacity: 0.8}}>Cardiology Department | Employee ID: #E001</p>
+                <h1 className="h2 mb-1" style={gradientText}>Welcome, Dr. Kuku Hidayat <span>A.O</span></h1>
+                <p style={{...gradientText, opacity: 0.8, margin:"15px"}}> Gynecology Department | Employee ID: #E001</p>
               </div>
               <div className="d-flex gap-2">
                 <Button 
@@ -136,6 +136,7 @@ const StaffPortal = () => {
                     color: 'white'
                   }}
                 >
+                  
                   <i className="fas fa-user-plus me-2"></i>
                   Add Patient
                 </Button>

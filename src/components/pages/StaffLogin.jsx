@@ -34,7 +34,7 @@ const StaffLogin = () => {
     setShowAlert(true)
     setTimeout(() => {
       window.location.href = "/staff-portal"
-    }, 1500)
+    }, 1000)
   }
 
   return (
@@ -127,14 +127,14 @@ const StaffLogin = () => {
                     <p className="small" style={gradientText}>
                       For technical support, contact IT at{" "}
                       <a 
-                        href="tel:555-123-4567" 
+                        href="tel:+234-813-342-2517" 
                         className="text-decoration-none"
                         style={{
                           ...gradientText,
                           textDecoration: 'underline !important'
                         }}
                       >
-                        (555) 123-4567
+                        (+234) 813-342-2517
                       </a>
                     </p>
                   </div>
