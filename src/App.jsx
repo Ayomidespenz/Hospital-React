@@ -12,7 +12,6 @@ import BillingHistory from "./components/pages/BillingHistory"
 import PatientProfile from "./components/pages/PatientProfile"
 import About from "./components/pages/About"
 import Contact from "./components/pages/Contact"
-
 import Services from "./components/pages/Services"
 import Doctors from "./components/pages/Doctors"
 import Footer from "./components/pages/Footer"
@@ -28,6 +27,16 @@ import LaboratoryServices from "./components/pages/services/LaboratoryServices"
 import InternalMedicine from "./components/pages/services/InternalMedicine"
 import Ophthalmology from "./components/pages/services/Ophthalmology"
 
+// Import department pages
+import EmergencyCare from "./components/pages/departments/EmergencyCare"
+import GeneralSurgery from "./components/pages/departments/GeneralSurgery"
+import PediatricsSurgery from "./components/pages/departments/PediatricsSurgery"
+import GeriatricsSurgery from "./components/pages/departments/GeriatricsSurgery"
+import Orthopedics from "./components/pages/departments/Orthopedics"
+import Neurology from "./components/pages/departments/Neurology"
+import Radiology from "./components/pages/departments/Radiology"
+import GynecologyObstetrics from "./components/pages/departments/GynecologyObstetrics"
+
 import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
@@ -39,36 +48,51 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact/>}/>
+            
+            {/* Services Routes */}
             <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={< Contact/>}/>
-            {/* Service Detail Routes */}
+            <Route path="/services/emergency-care" element={<EmergencyCare />} />
+            <Route path="/services/surgery" element={<GeneralSurgery />} />
             <Route path="/services/gynecological-care" element={<GynecologicalCare />} />
             <Route path="/services/prenatal-postnatal-care" element={<PrenatalPostnatalCare />} />
             <Route path="/services/fertility-services" element={<FertilityServices />} />
             <Route path="/services/minimally-invasive-surgery" element={<MinimallyInvasiveSurgery />} />
             <Route path="/services/well-woman-exams" element={<WellWomanExams />} />
             <Route path="/services/contraception-family-planning" element={<ContraceptionFamilyPlanning />} />
-            <Route path="/services/laboratory-services" element={<LaboratoryServices />} />
-            <Route path="/services/internal-medicine" element={<InternalMedicine />} />
-            <Route path="/services/ophthalmology" element={<Ophthalmology />} />
             
-            <Route path="/doctors" element={<Doctors />} />
-            <Route path="/Doctors/:id" element={<Doctors />} />
-            <Route path="/patient-portal" element={<PatientPortal />} />
-            <Route path="/staff-portal" element={<StaffPortal />} />
+            {/* Departments Routes */}
+            <Route path="/departments/internal-medicine" element={<InternalMedicine />} />
+            <Route path="/departments/general-surgery" element={<GeneralSurgery />} />
+            <Route path="/departments/pediatrics-surgery" element={<PediatricsSurgery />} />
+            <Route path="/departments/geriatrics-surgery" element={<GeriatricsSurgery />} />
+            <Route path="/departments/orthopedics" element={<Orthopedics />} />
+            <Route path="/departments/neurology" element={<Neurology />} />
+            <Route path="/departments/radiology" element={<Radiology />} />
+            <Route path="/departments/ophthalmology" element={<Ophthalmology />} />
+            <Route path="/departments/gynecology-obstetrics" element={<GynecologyObstetrics />} />
+            
+            {/* Patient Portal Routes */}
             <Route path="/patient/login" element={<PatientLogin />} />
             <Route path="/patient/register" element={<PatientRegister />} />
+            <Route path="/patient-portal" element={<PatientPortal />}>
+              <Route path="appointment-booking" element={<AppointmentBooking />} />
+              <Route path="medical-records" element={<MedicalRecords />} />
+              <Route path="billing-history" element={<BillingHistory />} />
+              <Route path="profile" element={<PatientProfile />} />
+            </Route>
+            
             <Route path="/staff/login" element={<StaffLogin />} />
-            <Route path="/appointment" element={<AppointmentBooking />} />
-            <Route path="/medical-records" element={<MedicalRecords />} />
-            <Route path="/billing" element={<BillingHistory />} />
-            <Route path="/profile" element={<PatientProfile />} />
+            <Route path="/staff/portal" element={<StaffPortal />} />
+            
+            {/* 404 Route - Keep this last */}
+            <Route path="*" element={<h1>404 - Page Not Found</h1>} />
           </Routes>
         </main>
         <Footer />
       </div>
     </Router>
-  );
+  )
 }
 
 export default App;
